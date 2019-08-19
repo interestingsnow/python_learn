@@ -19,6 +19,8 @@ def ref_data(data):
     recv_process = multiprocessing.Process(target=recv_msg, args=(data,))
     send_process.start()
     recv_process.start()
+    send_process.close()
+    recv_process.close()
 
 def queue_data(data):
     print("-----队列数据------")
@@ -26,6 +28,8 @@ def queue_data(data):
     recv_process = multiprocessing.Process(target=recv_msg, args=(data,))
     send_process.start()
     recv_process.start()
+    send_process.close()
+    recv_process.close()
 
 def main():
     # # 第一种：数据放在列表中
