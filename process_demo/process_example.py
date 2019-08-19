@@ -11,7 +11,7 @@ def recv_msg(data):
         print(data.get())
         if data.empty():
             print("---队列为空")
-
+            break
 
 def ref_data(data):
     print("-----列表数据------")
