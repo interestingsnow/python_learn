@@ -1,5 +1,6 @@
 import threading
 
+
 def send_mesg(data):
     """
     发送数据
